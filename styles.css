@@ -19,9 +19,11 @@ h1 {
     float: left;
 }
 
-#dice{
-    float: right;
-    padding: 0px 100px;
+#dice {
+    float: left;
+    padding: 0px 20px;
 }
 
-
+.player {
+    background-color: red;
+}
