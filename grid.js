@@ -13,8 +13,6 @@ function createGridArray() {
         [0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
         [0, 0, 0, 0, 0, 0, 0, 0, 0, 0]
     ];
-    // 0's are white cells and 1's are grey cells
-
 }
 
 function createDivGrid(grid) {

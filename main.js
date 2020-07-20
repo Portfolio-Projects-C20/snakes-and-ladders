@@ -1,8 +1,10 @@
 // Snakes and Ladders
 
-// Global Constants
+// Global Constants and Variables
 const numOfRows = 10;
 const numOfCols = 10;
+
+let cellId;
 
 
 // Create an array to represemt a grid
@@ -14,6 +16,7 @@ let player = {
     col: 0
 };
 
+
 grid[player.row][player.col] = 1;
 
 // Create divs to model the grid array
@@ -23,31 +26,35 @@ createDivGrid(grid);
 document.addEventListener("keydown", movePlayer);
 
 // Event Function
-function movePlayer(event) { // Remove the player when right arrowkey is pressed, find the element with id cell row, col and then remove the player class
-    console.log(event.keyCode);
-        // Place boundries on edges of grid
-        if (event.keyCode == 39) { //Right arrow key
-            updatePlayer(player.row, player.col + 1);
+function movePlayer(event) {
+    let rightCol = player.col <= 8;
+    let leftCol = player.col >= 1;
+    let upRow = player.row >= 1;
+    let downRow = player.row <= 8;
 
-        } else if (event.keyCode == 37) { //Left Arrow Key
-            updatePlayer(player.row, player.col - 1);
+    // Place boundries on edges of grid
+    if (event.keyCode == 39 && rightCol) { //Right arrow key
+        updatePlayer(player.row, player.col + 1);
 
-        } else if (event.keyCode == 38) {
-            updatePlayer(player.row - 1, player.col);
+    } else if (event.keyCode == 37 && leftCol) { //Left Arrow Key
+        updatePlayer(player.row, player.col - 1);
 
-        } else if (event.keyCode == 40) {
-            updatePlayer(player.row + 1, player.col);
-        }
+    } else if (event.keyCode == 38 && upRow) { //Up Arrow Key
+        updatePlayer(player.row - 1, player.col);
+
+    } else if (event.keyCode == 40 && downRow) { //Down Arrow Key
+        updatePlayer(player.row + 1, player.col);
+    }
+
 }
 
 function updatePlayer(newRow, newCol) {
     // Remove player class from current loacation
-    let cellId = "cell" + player.row + "-" + player.col;
+    cellId = "cell" + player.row + "-" + player.col;
     document.getElementById(cellId).classList.remove("player");
 
     //  Set grid array to 0 for current location
     grid[player.row][player.col] = 0;
-
     // Update player location 
     player.row = newRow;
     player.col = newCol;
