@@ -28,8 +28,9 @@ function createDivGrid(grid) {
             // Add appropriate class to each divEl
             if (grid[row][col] == 1) {
                 divEl.classList.add("player");
+            } else if(grid[row][col] == 2){
+                divEl.classList.add("indicator");
             }
-
             // Add dataset values for row and col
             divEl.dataset.row = row;
             divEl.dataset.col = col;

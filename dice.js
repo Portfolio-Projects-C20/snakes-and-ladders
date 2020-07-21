@@ -3,9 +3,11 @@
 // Event Listener
 document.getElementById("rollDice").addEventListener("click", rollDice);
 
+// Global Variable
+let dice;
 // Event Function
 function rollDice(){
-    let dice = Math.randomInt(1, 7);
+     dice = Math.randomInt(1, 7);
 
     if(dice == 1){
         displayDice("One");
@@ -25,5 +27,6 @@ function rollDice(){
 }
 
 function displayDice(number){
+    console.log(number);
     document.getElementById("diceImg").src = "images/dice/dice" + number + ".png";
 }
