@@ -7,8 +7,6 @@ const numOfCols = 10;
 let cellId;
 
 
-
-
 // Create an array to represemt a grid
 let grid = createGridArray();
 
@@ -21,8 +19,10 @@ grid[player.row][player.col] = 1;
 
 // Add a indicator to grid array which tells user how many spaces to travel to 
 let indicator = {
-
+    row:0,
+    col:0
 };
+// grid[indicator.row][indicator.col] = 2;
 
 console.log(indicator);
 

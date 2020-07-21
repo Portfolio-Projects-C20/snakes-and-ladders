@@ -53,3 +53,4 @@ function ladderMovement(baseRow, baseCol, topRow, topCol, direction) {
         console.log(cellId);
     }
 }
+
