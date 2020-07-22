@@ -4,9 +4,7 @@
 const numOfRows = 10;
 const numOfCols = 10;
 
-let cellId;
-
-
+let indicatorCellId;
 // Create an array to represemt a grid
 let grid = createGridArray();
 
@@ -22,13 +20,14 @@ let indicator = {
     row:0,
     col:0
 };
-// grid[indicator.row][indicator.col] = 2;
 
 console.log(indicator);
+
 
 // Create divs to model the grid array
 createDivGrid(grid);
 
 // Player Movement - Key Event Listeners
 document.addEventListener("keydown", movePlayer);
+
 

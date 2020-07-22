@@ -6,6 +6,7 @@ document.getElementById("rollDice").addEventListener("click", rollDice);
 // Global Variable
 let dice;
 // Event Function
+
 function rollDice() {
     dice = Math.randomInt(1, 7);
 
@@ -31,11 +32,14 @@ function displayDice(number) {
     document.getElementById("diceImg").src = "images/dice/dice" + number + ".png";
 
     // Add indicator to square player should travel to
-    let indicatorCellId = "cell" + 9 + "-" + (player.col + dice);
+    indicatorCellId = "cell" + player.row + "-" + (player.col + dice);
     document.getElementById(indicatorCellId).classList.add("indicator");
+    document.getElementById("player-movements").innerHTML = "Move your player to the indicated square!";
 
     grid[indicator.row][indicator.col] = 2;
 
-    // Remove indicator once player has moved on top 
-    console.log(indicatorCellId);
+    // Remove player class from current loacation
+   
+    // console.log(cellId);
 }
+
