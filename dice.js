@@ -8,8 +8,8 @@ let dice;
 // Event Function
 
 function rollDice() {
-    dice = Math.randomInt(1, 7);
-
+    dice = 3;
+    // Math.randomInt(1, 7)
     if (dice == 1) {
         displayDice("One");
     } else if (dice == 2) {
@@ -23,7 +23,6 @@ function rollDice() {
     } else if (dice == 6) {
         displayDice("Six");
     }
-
 }
 
 function displayDice(number) {
@@ -31,15 +30,10 @@ function displayDice(number) {
     // Display dice number image
     document.getElementById("diceImg").src = "images/dice/dice" + number + ".png";
 
+
     // Add indicator to square player should travel to
     indicatorCellId = "cell" + player.row + "-" + (player.col + dice);
     document.getElementById(indicatorCellId).classList.add("indicator");
     document.getElementById("player-movements").innerHTML = "Move your player to the indicated square!";
 
-    grid[indicator.row][indicator.col] = 2;
-
-    // Remove player class from current loacation
-   
-    // console.log(cellId);
 }
-
