@@ -22,6 +22,8 @@ let indicator = {
     col: 0
 };
 
+
+
 // Create divs to model the grid array
 createDivGrid(grid);
 
@@ -36,9 +38,11 @@ function movePlayer(event) {
     if (event.keyCode == 39) { //Right arrow key
         if (player.col == 9 && player.row % 2 == 1) {
             updatePlayer(player.row - 1, player.col);
-            
+           
         } else if (player.col < 9) {
             updatePlayer(player.row, player.col + 1);
+            
+            
         }
 
     }
@@ -46,17 +50,29 @@ function movePlayer(event) {
     if (event.keyCode == 37) { //Left Arrow Key
         if (player.col == 0 && player.row % 2 == 0) {
             updatePlayer(player.row - 1, player.col)
+
         } else if (player.col > 0) {
             updatePlayer(player.row, player.col - 1);
         }
-        
+
     }
 
     // Remove indicator when player lands on proper square
-    if (indicatorCellId == cellId) {
-        document.getElementById(indicatorCellId).classList.remove("indicator");
-        document.getElementById("player-movements").innerHTML = "Great Job! Roll the dice again!";
+    // if (indicatorCellId == cellId) {
+    //     document.getElementById(indicatorCellId).classList.remove("indicator");
+    //     document.getElementById("player-movements").innerHTML = "Great Job! Roll the dice again!";
+    // }
+
+    // climbUpLadders();
+    // slideDownSnakes();
+
+    // tryingtoStop();
+
+    if(cellId == "cell" + player.row + "-" + dice){
+        console.log("STOp");
     }
 
-
+    console.log(cellId);
+    
+    
 }
