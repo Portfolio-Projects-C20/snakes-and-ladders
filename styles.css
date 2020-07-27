@@ -1,6 +1,27 @@
 /* Stylesheet */
-h1 {
+body{
+    width: 1000px;
+    margin: auto;
+}
+
+h1, .instructions {
     text-align: center;
+    font-family: 'Roboto Mono', monospace;
+    width: 700px;
+    padding: 15px 0;
+    margin: auto;
+    color: darkslateblue;
+}
+
+#player-description {
+    float: right;
+    font-family: 'Nanum Myeongjo', serif;
+    color: cornflowerblue;
+}
+
+#player-movements{
+    color: black;
+    font-size: 15px;
 }
 
 #container {
@@ -30,4 +51,13 @@ h1 {
 
 .indicator {
     background-color: rgba(0, 0, 0, 0.493);
+}
+
+button{
+    width: 150px;
+    padding: 15px;
+    background-color: rgb(208, 208, 233) ;
+    border-radius: 8px;
+    font-family: 'Nanum Myeongjo', serif;
+    font-size: 20px;
 }

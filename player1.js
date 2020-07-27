@@ -32,15 +32,16 @@ function updatePlayer(newRow, newCol) {
 
     grid[player.row][player.col] = 1;
 
+    moveCount++;
 
 }
 
 function climbUpLadders() {
     for (let i = 0; i < ladderStart.length; i++) {
-            if (cellId == "cell" + ladderStart[i].row + "-" + ladderStart[i].col) {
-                console.log("Hello, I have arrived");
-                snakesandladdersMovement(ladderStart[i].row, ladderStart[i].col, ladderStop[i].row, ladderStop[i].col, "climed up the ladder");
-            }
+        if (cellId == "cell" + ladderStart[i].row + "-" + ladderStart[i].col) {
+            console.log("Hello, I have arrived");
+            snakesandladdersMovement(ladderStart[i].row, ladderStart[i].col, ladderStop[i].row, ladderStop[i].col, "climed up the ladder!");
+        }
 
     }
 }
@@ -48,12 +49,10 @@ function climbUpLadders() {
 function slideDownSnakes() {
     for (let i = 0; i < snakeStart.length; i++) {
         if (cellId == "cell" + snakeStart[i].row + "-" + snakeStart[i].col) {
-            console.log("Hello, I have arrived");
-            snakesandladdersMovement(snakeStart[i].row, snakeStart[i].col, snakeStop[i].row, snakeStop[i].col, "slid down the snake");
+            snakesandladdersMovement(snakeStart[i].row, snakeStart[i].col, snakeStop[i].row, snakeStop[i].col, "slid down the snake!");
         }   
     }
 }
-
 
 
 // Move up or down snakes and ladders
@@ -65,7 +64,3 @@ function snakesandladdersMovement(baseRow, baseCol, topRow, topCol, direction) {
     }
 }
 
-// function tryingtoStop(){
-  
-    
-// }

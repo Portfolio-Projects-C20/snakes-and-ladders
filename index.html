@@ -4,11 +4,19 @@
 <head>
     <title>GAME NAME</title>
     <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Nanum+Myeongjo:wght@700&family=Roboto+Mono&family=Varela+Round&display=swap" rel="stylesheet">
 </head>
 
 <body>
     <!-- Main Heading -->
-    <h1>Game Name</h1>
+    <h1>Snakes and Ladders!</h1>
+
+    <!-- Instructions -->
+    <p class="instructions">
+        Instructions: Begin the game by rolling the dice. Move your player using the left and right arrow keys. Watch
+        out for the snakes and ladders, but don't worry, if you hit too many snakes you will recive a special power up!
+        Have fun and get rolling!!
+    </p>
 
 
     <div id="dice">
@@ -21,18 +29,18 @@
         <button id="rollDice">Roll Dice!</button>
     </div>
 
-
-
-    <!-- Board Game Grid -->
-    <div id="container"></div>
-
     <!-- Player Movements -->
     <div id="player-description">
         Player Movements:
         <p id="player-movements">
-            Roll the dice to get started!!
+            <strong>Roll the dice to get started!!</strong> 
         </p>
     </div>
+
+    <!-- Board Game Grid -->
+    <div id="container"></div>
+
+
 
     <!-- Load Javacript -->
     <script src="player1.js"></script>
