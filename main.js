@@ -42,6 +42,7 @@ function movePlayer(event) {
         }
     }
 
+    // Up and down the ladders when player lands on specific squares
     if (moveCount == dice) {
         document.getElementById("player-movements").innerHTML = "Stop! Roll the dice again!"
         climbUpLadders();
@@ -49,14 +50,12 @@ function movePlayer(event) {
 
     }
 
+    // Add powerUp
+    PowerUp();
+
+    // Congratulations, game is over!
     finalSquare();
 
 
-}
-
-function finalSquare(){
-    if(cellId == "cell" + 0 + "-" + 0){
-        document.getElementById("player-movements").innerHTML = "Congratulations!! You made it to the end";
-    }
 }
 

@@ -4,7 +4,7 @@ body{
     margin: auto;
 }
 
-h1, .instructions {
+h1, #instructions {
     text-align: center;
     font-family: 'Roboto Mono', monospace;
     width: 700px;
@@ -49,9 +49,6 @@ h1, .instructions {
     background-color: red;
 }
 
-.indicator {
-    background-color: rgba(0, 0, 0, 0.493);
-}
 
 button{
     width: 150px;
@@ -60,4 +57,8 @@ button{
     border-radius: 8px;
     font-family: 'Nanum Myeongjo', serif;
     font-size: 20px;
+}
+
+#powerUp{
+    display: none;
 }

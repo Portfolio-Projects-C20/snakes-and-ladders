@@ -33,18 +33,9 @@ function rollDice() {
 }
 
 function displayDice(number) {
-
     // Display dice number image
     document.getElementById("diceImg").src = "images/dice/dice" + number + ".png";
 
-
-    // Store Players last col position to add to dice 
-    storePosition = player.col;
-
-
-    
+    // Player Movement
     document.getElementById("player-movements").innerHTML = "Move your player " + number + " square(s)!";
-
-
-
 }
